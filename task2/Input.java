@@ -1,9 +1,11 @@
 package task2;
 
+
 import java.io.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.io.FileFilter;
 
 public class Input {
     private static ArrayList<String> directories = new ArrayList<String>();
@@ -13,19 +15,23 @@ public class Input {
 
     public static void addDirectories(String name) throws IOException {
         File path = new File(name);
-        System.out.println("path " + path);
+        // System.out.println("path " + path);
         File[] filesList = path.listFiles();
-        System.out.println(filesList);
+        // System.out.println(filesList);
         for (File file : filesList) {
             if (file.isDirectory()) {
-                System.out.println(file.getName() + " is a directory");
+                // System.out.println(file.getName() + " is a directory");
                 directories.add(file.getAbsolutePath());
                 names1.add(file.getName());
                 addDirectories(file.getAbsolutePath());
             } else {
-                System.out.println(file.getName() + " is a file");
-                filenames.add(file.getAbsolutePath());
-                names2.add(file.getName());
+                if (file.getName().endsWith(".java")) {
+                    // System.out.println(file.getName() + " is a file");
+                    filenames.add(file.getAbsolutePath());
+                    names2.add(file.getName());
+
+                }
+
             }
         }
 
