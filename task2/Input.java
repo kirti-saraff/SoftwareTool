@@ -1,11 +1,10 @@
 package task2;
 
 
-import java.io.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.io.FileFilter;
+import java.lang.reflect.Modifier;
 
 public class Input {
     private static ArrayList<String> directories = new ArrayList<String>();
@@ -34,8 +33,16 @@ public class Input {
 
             }
         }
+    }
 
-        // System.out.println(names);
+    public static Class getExternalClass(String className, String packageName){
+        try{
+            return Class.forName(packageName+"."+className);
+        }
+        catch(ClassNotFoundException e){
+
+        }
+        return null;
     }
 
     public static void main(String[] args) {
@@ -43,10 +50,17 @@ public class Input {
             // Input obj = new Input();
             // System.out.println(args[0]);
             addDirectories((args[0]));
+
+             Class c = getExternalClass("Price", "comp5911m.cwk2");
+            // //Class<Input> c = Input.class;
+             int mod = c.getModifiers();
+             boolean value= Modifier.isAbstract(mod);
+             System.out.println(value);
+
             // checkFiles(args[0]);
             System.out.println(names1);
-            System.out.println("diff=======");
-            System.out.println(names2);
+            //System.out.println("diff=======");
+            //System.out.println(names2);
 
         } catch (IOException e) {
         }
