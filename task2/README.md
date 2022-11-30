@@ -11,6 +11,7 @@ Download and unzip the file SoftwareTool.
 
 ## Pre-requisite: 
 Java. Preferably the latest version.
+
 JDK. Preferably the latest version.
 
 ## Executing the software:
