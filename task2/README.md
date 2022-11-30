@@ -3,7 +3,10 @@
 
 This project is a software application that calculates the abstraction of a package using reflection and it takes out the instability of a package within a collection of packages. 
 
+This software applicatiion analyses files that are written in Java.
+
 Languages,Technologies and Implementation Architecture used for this project:
+
 Java(version 17), Java Reflection, JDK(version 17)
 
 ## Getting Started:
