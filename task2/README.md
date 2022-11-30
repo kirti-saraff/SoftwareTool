@@ -15,13 +15,17 @@ JDK. Preferably the latest version.
 
 ## Executing the software:
 Move the software/folders inside the same parent directory as 'task2'.
+
 Open a terminal/command line before task2.
+
 cd [Parent_directory]
 
 Before running the file export the classpath for getting the abstractness of a package. 
+
 export CLASSPATH=.:[PATH_TO_PACKAGE_FILE_FOR_ABSTRACTNESS]
 
 javac task2/Input.java
+
 java task2.Input
 
 Note: For calculating abstractness of another package please export the classpath and run the file again.
