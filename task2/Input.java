@@ -124,13 +124,13 @@ public class Input {
                     case 1:
                     System.out.println();
                     System.out.println("Calculating abstractness ");
-                    Scanner obj=new Scanner(System.in);
-                    System.out.println("enter package name :");
-                    String Abspkg=obj.nextLine();
                     Scanner obj2=new Scanner(System.in);
                     System.out.println("enter project path :");
                     String AbsProPath=obj2.nextLine();
-                    
+                    Scanner obj=new Scanner(System.in);
+                    System.out.println("enter package name :");
+                    String Abspkg=obj.nextLine();
+
                     addDirectories((AbsProPath));
                     double abs = abstractness(Abspkg);
                     System.out.println();
